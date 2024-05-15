@@ -1,0 +1,33 @@
+{
+  "name": "version",
+  "version": "0.0.0",
+  "description": "versionado semantico",
+  "main": "index.js",
+  "engines": {
+    "node": "20.2",
+    "npm": "9.5"
+  },
+  "files": [
+    "src/index.js",
+    "src/car.js"
+  ],
+  "engineStrict": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "audit": "nodemon audit/index.js",
+    "build": "npm pack && mv version-**.tgz dist/",
+    "deploy": "node deploy && npm run extract",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "crypto-js": "^4.2.0",
+    "inquirer": "^8.2.6",
+    "nodemon": "^3.1.0",
+    "tar": "^7.1.0"
+  },
+  "dependencies": {}
+}
